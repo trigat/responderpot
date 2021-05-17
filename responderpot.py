@@ -21,7 +21,7 @@ def sendmail(ip):
     Responder.py is an attacker tool that can answer LLMNR and NBT-NS queries giving its own IP address as the destination for any hostname requested.
     It will ask client machines for credentials.  If client machines are incorrectly configured, this can yield domain user/administrator hashes.'''
 
-    with smtplib.SMTP("10.1.140.10", 587) as server:
+    with smtplib.SMTP("10.1.140.10", 25) as server:
         # server.starttls()
         # server.ehlo()
         # server.login(send_address, password)
